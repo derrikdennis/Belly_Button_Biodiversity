@@ -1,0 +1,16 @@
+html {
+    font-family: "Overpass", "Open Sans", "Raleway"
+}
+
+.chart {
+    max-height: calc (200px + 20 px) !important;
+    overflow: hidden;
+}
+
+;
+
+.panel {
+    font-stretch: expanded
+}
+
+;
