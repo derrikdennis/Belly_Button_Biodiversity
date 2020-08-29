@@ -84,7 +84,6 @@ function barChart(results) {
   let trace = {
     x: sample_values,
     y: otu_ids,
-    labels: otu_labels,
     mode: "markers",
     marker: {
       color: colors,
@@ -99,13 +98,18 @@ function barChart(results) {
   let plotdata = [trace];
 
   let layout = {
-    title: "Top 10 Microbial Species Found <br> in Subject's Belly Button",
-    titlefont: {
-      size: 24,
+    hoverinfo: otu_labels,
+    title: {
+      text: "Top 10 Microbial Species Found <br> in Subject's Belly Button",
+      font: {
+        size: 20,
+        xanchor: "left",
+        yanchor: "top",
+      },
     },
     autosize: false,
-    width: 500,
-    height: 500,
+    width: 375,
+    height: 550,
     margin: {
       l: 50,
       r: 50,
@@ -113,30 +117,22 @@ function barChart(results) {
       t: 100,
       pad: 4,
     },
-    font: {
-      family: "Overpass, Open Sans, Raleway",
-    },
     yaxis: {
       autorange: "reversed",
       automargin: true,
-      ticktext: `<b>${otu_ids}</b>`,
-      tickmode: "array",
-      tickfont: {
-        size: 14,
-      },
-      xaxis: {
-        title: {
-          text: "Num. Microbial Species",
-          font: {
-            family: "Overpass, Open Sans, Raleway",
-            size: 14,
-          },
+    },
+    xaxis: {
+      title: {
+        text: "Num. Microbial Species",
+        font: {
+          family: "Overpass, Open Sans, Raleway",
+          size: 11,
         },
       },
     },
   };
 
-  var config = {
+  let config = {
     responsive: true,
   };
 
@@ -219,131 +215,36 @@ function generateTable(testSubjectDemos) {
 }
 
 function gaugeChart(wfreq) {
-  var level = parseInt(wfreq) * 20 - 10;
-  // Trig to calc meter point
-  var degrees = 180 - level,
-    radius = 0.5;
-  var radians = (degrees * Math.PI) / 180;
-  var x = radius * Math.cos(radians);
-  var y = radius * Math.sin(radians);
-  var path1 =
-    degrees < 45 || degrees > 135
-      ? "M -0.0 -0.025    L 0.0 0.025 L "
-      : "M -0.025 -0.0 L 0.025 0.0 L ";
-  // Path: may have to change to create a better triangle
-  var mainPath = path1,
-    pathX = String(x),
-    space = " ",
-    pathY = String(y),
-    pathEnd = " Z";
-  var path = mainPath.concat(pathX, space, pathY, pathEnd);
-
-  base_chart = {
-    values: [64, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8],
-    domain: { x: [0, 0.75] },
-    marker: {
-      colors: [
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-        "rgb(255, 255, 255)",
-      ],
-    },
-    name: "Gauge",
-    hole: 0.4,
-    type: "pie",
-    direction: "clockwise",
-    rotation: 108,
-    showlegend: false,
-    hoverinfo: "none",
-  };
-
-  meter_chart = {
-    values: [72, 8, 8, 8, 8, 8, 8, 8, 8, 8],
-    text: ["", "0-1", "1-2", "2-3", "3-4", "4-5", "5-6", "6-7", "7-8", "8-9"],
-    marker: {
-      colors: [
-        "#ffffff",
-        "#dce5e3",
-        "#bbcbc7",
-        "#9ab1ac",
-        "#7a9992",
-        "#5a8178",
-        "#3a6960",
-        "#325750",
-        "#294640",
-        "#213531",
-      ],
-    },
-    domain: { x: [0, 0.75] },
-    name: "Gauge",
-    hole: 0.3,
-    type: "pie",
-    direction: "clockwise",
-    rotation: 90,
-    showlegend: false,
-    textinfo: "text",
-    textposition: "inside",
-    hoverinfo: "none",
-  };
-
-  data = [base_chart, meter_chart];
-
-  var layout = {
-    shapes: [
-      {
-        type: "path",
-        path: "path",
-        fillcolor: "#61424B",
-        line: {
-          color: "#61424B",
+  var data = [
+    {
+      domain: { x: [0, 1], y: [0, 1] },
+      value: wfreq,
+      title: { text: "Weekly Washing Frequency" },
+      type: "indicator",
+      mode: "gauge+number",
+      gauge: {
+        axis: { range: [null, 9], tickwidth: 1, tickcolor: "#000082" },
+        steps: [
+          { range: [0, 1], color: "#f0f0f0" },
+          { range: [1, 2], color: "#dce5e3" },
+          { range: [2, 3], color: "#bbcbc7" },
+          { range: [3, 4], color: "#9ab1ac" },
+          { range: [4, 5], color: "#7a9992" },
+          { range: [5, 6], color: "#5a8178" },
+          { range: [6, 7], color: "#3a6960" },
+          { range: [7, 8], color: "#325750" },
+          { range: [8, 9], color: "#294640" },
+        ],
+        threshold: {
+          line: { color: "red", width: 4 },
+          thickness: 0.75,
+          value: 490,
         },
       },
-    ],
-    font: {
-      family: "Overpass, Open Sans, Raleway",
     },
-    xaxis: {
-      zeroline: false,
-      showticklables: false,
-      showgrid: false,
-      range: [-1, 1],
-    },
-    yaxis: {
-      showticklabels: false,
-      showgrid: false,
-      zeroline: false,
-      range: [-1, 1],
-    },
-    shapes: [
-      {
-        type: "path",
-        path: "M 0.235 0.5 L 0.24 0.65 L 0.245 0.5 Z",
-        fillcolor: "rgba(44, 160, 101, 0.5)",
-        line: {
-          width: 0.5,
-        },
-        xref: "paper",
-        yref: "paper",
-      },
-    ],
-    annotations: [
-      {
-        xref: "paper",
-        yref: "paper",
-        x: 0.23,
-        y: 0.45,
-        text: "50",
-        showarrow: false,
-      },
-    ],
-  };
+  ];
+
+  var layout = { width: 300, height: 225, margin: { t: 0, b: 0 } };
   Plotly.newPlot("gauge", data, layout);
 }
 
