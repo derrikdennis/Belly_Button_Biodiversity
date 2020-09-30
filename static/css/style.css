@@ -21,9 +21,14 @@
     padding: 5% 13% 3% 13%;
 }
 
-.card-title {
+.card-header {
     font-size: 2rem;
     letter-spacing: 1.3px;
+}
+
+.card-block {
+    font-size: 1rem;
+    letter-spacing: 1.3px
 }
 
 .btn {
