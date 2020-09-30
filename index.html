@@ -37,23 +37,40 @@
 
     <img src="./static/img/myimage.jpeg" class="center-block" alt="Center Aligned Image">
     
-    <div class="jumbotron pt-6">
-      <h1 class="display-4">Belly Button Diversity</h1>
-      <p class="lead">Please select a subject ID to find out their belly button stats.</p>
-      <div class="btn-group">
-        <button Type = "button" class = "btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown"
-        aria-has-popup="true" aria-expanded="false">
-        Test ID Number:
-      </button>
-      <fieldset class="form-group">
-        <select
-          class="form-group"
-          id="selDataset"
-          onchange="optionChanged(this.value)">
-        </select>
-      </fieldset>
-      </div>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+      <h1 class="display-3">Belly Button Diversity</h1>
+      <p class="lead">Belly buttons can be gross!  Not everyone takes good care of the belly buttons
+      </p>
+      <p class="lead">Scientists have determined that all sorts of microrganisms live in the circle on your stomach.</p>
+      <hr class="m-y-2">
+      <p>Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
+      <form>
+        <fieldset class="form-group">
+          <label>Test ID Number:</label>
+              <select
+                class="form-control"
+                 id="selDataset"
+                 onchange="optionChanged(this.value)">
+              </select>
+        </fieldset>
+      </form>
     </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-block">
+      <h4 class="card-title"> Card Title </h4>
+    </div>
+    <img class="car-img-top img-fluid" src="./static/img/myImage.jpeg">
+    <div class="card-block">
+      <h4 class="card-title">Card Title</h4>
+      <p class="card-text">Some basica description text for your card should appear in this section</p>
+      <a href="#" class="btn btn-primary">Button</a>
+    </div>
+  </div>
 
     <div class="container">
         <!-- page title //-->  
