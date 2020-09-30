@@ -38,37 +38,80 @@
     <img src="./static/img/myimage.jpeg" class="center-block" alt="Center Aligned Image">
     
 
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-      <h1 class="display-3">Belly Button Diversity</h1>
-      <p class="lead">Belly buttons can be gross!  Not everyone takes good care of the belly buttons
-      </p>
-      <p class="lead">Scientists have determined that all sorts of microrganisms live in the circle on your stomach.</p>
-      <hr class="m-y-2">
-      <p>Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
-      <form>
-        <fieldset class="form-group">
-          <label>Test ID Number:</label>
-              <select
-                class="form-control"
-                 id="selDataset"
-                 onchange="optionChanged(this.value)">
-              </select>
-        </fieldset>
-      </form>
+<section id="top-container">
+<div class="container-fluid toggles d-flex flex-column ng-scope" data-mg-show="!ui.busy">
+  <div class="row align-items-center bg-primary check-contrast py-5">
+    <div class="col-xl-9 col-lg-11 container-alt text-light toggles-ignore mx-auto py-5">
+      <div class="row py-2">
+        <div class="col-xl-7 col-lg-8 py-2 text-center text-lg-left">
+          <h1 class="display-3 mb-0">
+            <span data-ng-bind="selected.pallete.name" class="ng-binding">Belly Button Biodiveristy</span>
+          </h1>
+          <p class="lead mb-3"><span data-ng-bind="selected.palette.desc" class="ng-binding">Not everyone washes their belly button when they bathe.</span>
+            Belly buttons can be gross!</p>
+          <p>Scientists have determined that all sorts of microorganisms live in the circle on your stomach</p>
+          <hr class="m-y-2">
+          <p>Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
+          <form>
+            <fieldset class="form-group">
+              <label>Test ID Number:</label>
+                  <select
+                    class="form-control"
+                     id="selDataset"
+                     onchange="optionChanged(this.value)">
+                  </select>
+            </fieldset>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
-
-
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title"> Card Title </h4>
+</div>
+</section>
+<section id="card-section" class="py-2">
+  <div class="container-fluid mx-auto">
+    <div class="row">
+      <div class="card col-md-3 col-sm-6 child">
+        <div class="card-header">
+            <h1 class="card-text text-lg-left">
+               Gender
+            </h1>
+         
+        </div>
+        <div class="card-block">
+          <p class="card-text">Female</p>
+        </div>
+      </div>
+      <div class="card col-md-3 col-sm-6 child">
+        <div class="card-header">
+          Age
+        </div>
+        <div class="card-block">
+          <h4 class="card-text">24</h4>
+        </div>
+      </div>
+      <div class="card col-md-3 col-sm-6 child">
+        <div class="card-header">
+          Ethnicity
+        </div>
+        <div class="card-block">
+          <h4 class="card-text">Caucasian</h4>
+        </div>
+      </div>
+      <div class="card col-md-3 col-sm-6 child">
+        <div class="card-header">
+          Header
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">Location</h4>
+          <p class="card-text">Will tranform this into a map</p>
+        </div>
+      </div>
     </div>
-    <img class="car-img-top img-fluid" src="./static/img/myImage.jpeg">
-    <div class="card-block">
-      <h4 class="card-title">Card Title</h4>
-      <p class="card-text">Some basica description text for your card should appear in this section</p>
-      <a href="#" class="btn btn-primary">Button</a>
+  </div>
+  </section>
+
+
     </div>
   </div>
 
@@ -108,50 +151,6 @@
             </div>  
           </div>
         </div>
-
-<div class="container">
-  <div class="row">
-    <div class = "col-md-3 col-md-6 child">
-      <h3><a href="#">Blog Post Title</a></h3>
-      <p><small>Posted by <a href="#">Derrik</a> on September 29, 
-        2020</small></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-        sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris 
-        nisi ut aliquip ex eacommodo consequat.</p>
-      <p><a href="#">Read More</a></p>
-    </div>
-    <div class = "col-md-3 col-xs-6 child">
-      <h3><a href="#">Blog Post Title</a></h3>
-      <p><small>Posted by <a href="#">Derrik</a> on September 29, 
-        2020</small></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-         sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. 
-         Ut enim ad minimveniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex eacommodo consequat.</p>
-      <p><a href="#">Read More</a></p>
-    </div>
-    <div class = "col-md-3 col-xs-12 child">
-      <h3><a href="#">Blog Post Title</a></h3>
-      <p><small>Posted by <a href="#">Derrik</a> on September 29, 
-        2020</small></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-         sed do eiusmodtempor incididunt ut labore et dolore magna 
-         aliqua. Ut enim ad minimveniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex eacommodo consequat.</p>
-      <p><a href="#">Read More</a></p>
-    </div>
-    <div class = "col-md-3 child">
-      <h3><a href="#">Blog Post Title</a></h3>
-      <p><small>Posted by <a href="#">Derrik</a> on September 29, 2020</small></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmodtempor incididunt ut labore et dolore magna
-       aliqua. Ut enim ad minimveniam, quis nostrud exercitation 
-       ullamco laboris nisi ut aliquip ex eacommodo consequat.</p>
-      <p><a href="#">Read More</a></p>
-    </div>
-  </div>
-</div>
 
 
 
