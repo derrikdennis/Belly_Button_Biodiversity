@@ -5,116 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">   
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Bellybutton Biodiversity</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link rel="stylesheet" type="text/css" href="./static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="./static/css/theme.css" />
-    <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=GillSans">
-  </head>
-
-  <body>
-    <nav class = "navbar navbar-light bg-faded">
-      <a class="navbar-brand" href="#"> Derrik Dennis </a>
-      <ul class="nav navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link href="index.html"></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">Resume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html">Projects</a>
-        </li>
-      </ul>
-      <form class="form-inline pull-xs-right">
-       <input class="form-control" type="text" placeholder="Search">
-       <button class="btn btn-primary" type="submit">Search</button>
-      </form>
-    </nav>
-
-<section id="top-container">
-<div class="container-fluid toggles d-flex flex-column ng-scope" data-mg-show="!ui.busy">
-  <div class="row align-items-center bg-primary check-contrast py-5">
-    <div class="col-xl-9 col-lg-11 container-alt text-light toggles-ignore mx-auto py-5">
-      <div class="row py-2">
-        <div class="col-xl-7 col-lg-8 py-2 text-center text-lg-left">
-          <h1 class="display-3 mb-0">
-            <span data-ng-bind="selected.pallete.name" class="ng-binding">Belly Button Biodiveristy</span>
-          </h1>
-          <hr/>
-          <p class="lead mb-3"><span data-ng-bind="selected.palette.desc" class="ng-binding">Not everyone washes their belly button when they bathe.</span>
-            Belly buttons can be gross!</p>
-          <p class="lead mb-3">Scientists have determined that all sorts of microorganisms live in the circle on your stomach</p>
-          <p class="lead mb-3">Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
-          <hr/>
-          <form>
-            <fieldset class="form-group">
-              <label>Test ID Number:</label>
-                  <select
-                    class="form-control"
-                     id="selDataset"
-                     onchange="optionChanged(this.value)">
-                  </select>
-            </fieldset>
-          </form>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=GillSans">
+  </head> <!--
+    ###############################################
+    #                                             #
+    #               NAVBAR SECTION                #
+    #                                             #
+    ###############################################
+--><body>
+    <section>
+      <nav class = "navbar navbar-light bg-faded">
+        <a class="navbar-brand" href="#"> Derrik Dennis </a>
+        <ul class="nav navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link href="index.html"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">Projects</a>
+          </li>
+        </ul>
+        <form class="form-inline pull-xs-right">
+          <input class="form-control" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+      </nav>
+    </section>
+    <section id="top-container">
+    <div class="container-fluid toggles d-flex flex-column ng-scope" data-mg-show="!ui.busy">
+      <div class="row align-items-center bg-primary check-contrast py-5">
+        <div class="col-xl-9 col-lg-11 container-alt text-light toggles-ignore mx-auto py-5">
+          <div class="row py-2">
+            <div class="col-xl-7 col-lg-8 py-2 text-center text-lg-left">
+              <h1 class="display-3 mb-0">
+                <span data-ng-bind="selected.pallete.name" class="ng-binding">Belly Button Biodiveristy</span>
+              </h1>
+              <hr/>
+              <p class="lead mb-3"><span data-ng-bind="selected.palette.desc" class="ng-binding">Not everyone washes their belly button when they bathe.</span>
+                Belly buttons can be gross!</p>
+              <p class="lead mb-3">Scientists have determined that all sorts of microorganisms live in the circle on your stomach</p>
+              <p class="lead mb-3">Below we have test subjects data on the microrganisms living in their belly button.  Please select a Test Subject ID.</p>
+              <hr/>
+              <form>
+                <fieldset class="form-group">
+                  <label>Test ID Number:</label>
+                      <select
+                        class="form-control"
+                        id="selDataset"
+                        onchange="optionChanged(this.value)">
+                      </select>
+                </fieldset>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-</section>
-<section id="card-section" class="py-2">
-  <div class="container-fluid mx-auto">
-    <div class="row">
-      <div class="card col-md-3 col-sm-6 child">
-        <div class="card-header">
+    </section>
+    <section id="card-section" class="py-2">
+      <div class="container-fluid mx-auto">
+        <div class="row">
+          <div class="card col-md-3 col-sm-6 child">
+            <div class="card-header">
+              <h1 class="card-text text-lg-left"> Gender</h1>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Female</p>
+            </div>
+          </div>
+          <div class="card col-md-3 col-sm-6 child">
+            <div class="card-header">
+              <h1 class="card-text text-lg-left">
+                Age
+              </h1>
+            </div>
+            <div class="card-body">
+              <p class="card-text">24</p>
+            </div>
+          </div>
+          <div class="card col-md-3 col-sm-6 child">
+            <div class="card-header">
+              <h1 class="card-text text-lg-left">
+                Ethnicity
+              </h1>    
+            </div>
+            <div class="card-body">
+              <p class="card-text">Caucasian</p>
+            </div>
+          </div>
+          <div class="card col-md-3 col-sm-6 child">
+            <div class="card-header">
             <h1 class="card-text text-lg-left">
-               Gender
+              Location
             </h1>
-        </div>
-        <div class="card-body">
-          <p class="card-text">Female</p>
-        </div>
-      </div>
-      <div class="card col-md-3 col-sm-6 child">
-        <div class="card-header">
-        <h1 class="card-text text-lg-left">
-          Age
-       </h1>
-      </div>
-        <div class="card-body">
-          <h4 class="card-text">24</h4>
+          </div> 
+          <div class="card-body">
+            <p class="card-text">Will tranform this into a map</p>
+          </div>
         </div>
       </div>
-      <div class="card col-md-3 col-sm-6 child">
-        <div class="card-header">
-        <h1 class="card-text text-lg-left">
-          Ethnicity
-       </h1>    
-      </div>
-        <div class="card-body">
-          <h4 class="card-text">Caucasian</h4>
-        </div>
-      </div>
-      <div class="card col-md-3 col-sm-6 child">
-        <div class="card-header">
-        <h1 class="card-text text-lg-left">
-          Location
-       </h1>
-      </div> 
-        <div class="card-body">
-          <p class="card-text">Will tranform this into a map</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-
+    </section>
+<!--End of Card Section-->
 
     </div>
   </div>
