@@ -58,4 +58,3 @@ The following task is advanced and therefore optional.
 ## Results
 
 My dashboard is located at [derrikdennis.github.io/Belly_Button_Biodiversity](https://derrikdennis.github.io/Belly_Button_Biodiversity)
-_
