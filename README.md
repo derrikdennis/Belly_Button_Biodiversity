@@ -2,8 +2,8 @@
 
 ## Table of Contents <!-- omit in toc -->
 - [Background](#background)
-- [Step 1: Plotly](#step-1-plotly)
-- [Advanced Challenge Assignment (Optional)](#advanced-challenge-assignment-optional)
+- [Step 1: Plotly Bar, Panel and Scattplot Graphs](#step-1-plotly-bar-panel-and-scattplot-graphs)
+- [Step 2: Plotly Gauge Chart](#step-2-plotly-gauge-chart)
 - [Results](#results)
 
 
@@ -13,7 +13,7 @@ In this assignment, I will use plotly graphs to build an interactive dashboard u
 
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 
-## Step 1: Plotly
+## Step 1: Plotly Bar, Panel and Scattplot Graphs
 
 1. Use the D3 library to read in `samples.json`.
 
@@ -45,7 +45,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown below:
 
-## Advanced Challenge Assignment (Optional)
+## Step 2: Plotly Gauge Chart
 
 The following task is advanced and therefore optional.
 
