@@ -1,4 +1,11 @@
-# Belly Button Biodiversity - Plotly.js Graphs in Dashboard Format
+# Belly Button Biodiversity - Plotly.js Graphs in Dashboard Format <!-- omit in toc -->
+
+## Table of Contents <!-- omit in toc -->
+- [Background](#background)
+- [Step 1: Plotly](#step-1-plotly)
+- [Advanced Challenge Assignment (Optional)](#advanced-challenge-assignment-optional)
+- [Results](#results)
+
 
 ## Background
 
