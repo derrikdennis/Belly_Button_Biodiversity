@@ -4,7 +4,9 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    background-color: #bbcbc7 ;
+    background-color: #4c4cd9 ;
+    color: #fff;
+    align-items: center;
 }
 
 .child {
@@ -61,5 +63,6 @@
 }
 
 .panel-default>.panel-heading-custom{
-    background: #bbcbc7;
+    background: #c64f00;
+    color: #fff
 }
