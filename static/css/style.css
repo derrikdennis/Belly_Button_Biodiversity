@@ -4,6 +4,7 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    background-color: #bbcbc7 ;
 }
 
 .child {
@@ -56,7 +57,9 @@
 ;
 
 .panel {
-    font-stretch: expanded
+    font-stretch: expanded;
 }
 
-;
+.panel-default>.panel-heading-custom{
+    background: #bbcbc7;
+}
