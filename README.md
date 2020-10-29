@@ -43,7 +43,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 6. Update all of the plots any time that a new sample is selected.
 
-Additionally, you are welcome to create any layout that you would like for your dashboard. An example dashboard is shown below:
+Additionally, you are welcome to create any layout that you would like for your dashboard. 
 
 ## Step 2: Plotly Gauge Chart
 
